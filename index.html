@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tabuada</title>
+    <script>
+        function gerarTabuada(){
+            var numero = parseInt(document.getElementById('numero').value);
+            var tabela = document.getElementById('tabela-tabuada');
+
+
+            tabela.innerHTML = "" ;//limpar a tabela antes de gerar outra.
+//gerar a tabuada
+            for (var i = 1; i <= 10; i++) {
+                var resultado = numero * i;
+                var linha = "<tr><td>" + numero + " X " + i + "</td><td>" + " = " + resultado + "</td></tr>";
+                 tabela.innerHTML += linha
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+   
+
+<header>
+<h1>Tabuada</h1> <button id="toggle-mode">Alternar Modo</button>
+</header>
+<main>
+
+<p>Digite um Número para descobrir sua Tabuada:</p>
+<div class="inpbut">
+<input type="text" id="numero">
+<button onclick="gerarTabuada()">Descobrir</button>
+</div>
+<table id="tabela-tabuada"> </table>
+   
+</main> 
+
+
+
+<script src="main.js"></script>
+
+<footer>
+ E-mail: rafav2.0x@gmail.com <br> © 2023  - Todos os direitos reservados.</p> 
+    
+</body>
+</html>
